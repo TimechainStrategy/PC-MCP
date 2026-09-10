@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { createClientFromEnv } from "./client/pco-client.js";
+import { loadProjectEnv } from "./load-env.js";
 import { createPcoMcpServer, SERVER_NAME, SERVER_VERSION } from "./server.js";
+
+loadProjectEnv();
 
 async function main(): Promise<void> {
   const client = createClientFromEnv();
