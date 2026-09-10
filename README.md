@@ -78,6 +78,8 @@ npm run smoke
 
 ## Cursor config
 
+On startup the server loads `.env` then `.env.local` from the package root (empty MCP `env` values do not block this). Copy `.env.example` and add a Personal Access Token so Cursor does not need secrets in `mcp.json`.
+
 Add to your MCP settings (path varies by Cursor version), using an absolute path to this repo:
 
 ```json
